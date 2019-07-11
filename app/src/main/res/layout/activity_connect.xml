@@ -12,14 +12,52 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/device_detail"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@id/device_state"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+
             app:layout_constraintTop_toTopOf="parent"
             android:background="?selectableItemBackground"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+
+    <ImageView
+            android:id="@+id/device_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/device_detail"
+            app:layout_constraintBottom_toBottomOf="@id/device_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_bluetooth_disabled_red_500_24dp"
+            app:layout_constraintStart_toEndOf="@id/device_detail"
+            />
+
+    <Button
+            android:text="创建配对"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_bond"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/device_detail"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/connect_device"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/create_bond"
+            android:text="连接设备"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"/>
 
     <Button
             android:text="发送时间"
@@ -27,7 +65,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/send_time"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/device_detail"
+            app:layout_constraintTop_toBottomOf="@+id/connect_device"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,4 +82,28 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/send_time"/>
+
+    <Button
+            android:text="导航信息"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/send_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/send_phone"/>
+
+    <Button
+            android:text="发送图片"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/send_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/send_navigation"/>
 </android.support.constraint.ConstraintLayout>

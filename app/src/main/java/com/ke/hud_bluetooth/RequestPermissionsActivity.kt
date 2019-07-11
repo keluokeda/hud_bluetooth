@@ -18,6 +18,7 @@ class RequestPermissionsActivity : AppCompatActivity() {
                 if (it) {
                     startActivity(Intent(this, MainActivity::class.java))
                 }
+                finish()
             }
     }
 }
